@@ -10,7 +10,7 @@ in testing and BOUNDARY (EDGE) TESTING.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
+         and Aaryan Khatri.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import random
@@ -34,10 +34,10 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_sequence()
-    # run_test_count_items_bigger_than()
-    # run_test_count_positive_sines()
-    # run_test_sum_first_n()
+    #run_test_sum_sequence()
+    #run_test_count_items_bigger_than()
+    #run_test_count_positive_sines()
+    run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
@@ -231,7 +231,11 @@ def sum_sequence(sequence):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(sequence)):
+        total = total + sequence[k]
 
+    return total
 
 def run_test_count_items_bigger_than():
     """ Tests the   count_items_bigger_than   function. """
@@ -362,6 +366,26 @@ def run_test_count_items_bigger_than():
 
     # TODO 4 (continued):  Add your 2 ADDITIONAL tests here:
 
+    # Test 9:
+    sequence = [45, 84, 32, 70, -10, 40]
+    threshold = 32
+    expected = 4
+    actual = count_items_bigger_than(sequence, threshold)
+    print()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 10:
+    sequence = [45, 84, 32, 70, -10, 40]
+    threshold = 84
+    expected = 0
+    actual = count_items_bigger_than(sequence, threshold)
+    print()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', actual)
+
+
+
 
 def count_items_bigger_than(numbers, threshold):
     """
@@ -400,7 +424,12 @@ def count_items_bigger_than(numbers, threshold):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(numbers)):
+       if numbers[k] > threshold:
+           total = total + 1
 
+    return total
 
 def run_test_count_positive_sines():
     """ Tests the   count_positive_sines   function. """
@@ -530,7 +559,12 @@ def count_positive_sines(numbers):
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    count = 0
+    for k in range(len(numbers)):
+        if math.sin(numbers[k]) > 0:
+            count = count + 1
 
+    return count
 
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
@@ -638,7 +672,11 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(n):
+        total = total + numbers[k]
 
+    return total
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
