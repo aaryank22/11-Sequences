@@ -14,7 +14,8 @@ is different from:
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and Aaryan Khatri.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE\
+# : 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ###############################################################################
