@@ -37,7 +37,7 @@ def main():
     #run_test_sum_sequence()
     #run_test_count_items_bigger_than()
     #run_test_count_positive_sines()
-    # run_test_sum_first_n()
+    #run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
